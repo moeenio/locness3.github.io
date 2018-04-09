@@ -1,8 +1,11 @@
 /* Fonts from Google Fonts - more at https://fonts.google.com */
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,700');
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+body {
+   font-family: "Cabin", sans-serif; 
+}
+
 header {
-  font-family: "Cabin", sans-serif;
   margin-top: 10px;
 }
 
