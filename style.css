@@ -1,0 +1,55 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Cabin:400,700');
+header {
+  font-family: "Cabin", sans-serif;
+  margin-top: 10px;
+}
+
+nav p {
+  color: #000000;
+  text-decoration: none;
+  display: inline;
+  margin-right: 10px;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-image: url('https://raw.githubusercontent.com/locness3/images-host/master/matt-lamers-261639-unsplash.jpg');
+  background-size: cover;
+  color: #ffffff;
+  height: 500px;
+  
+}
+
+.jumbotron-text {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.button {
+
+}
+
+.button a {
+  display: block;
+}
+
+.stuff1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000000;
+  background-image: url("https://i.cubeupload.com/cDVqYM.png");
+  background-position: center;
+}
+
+.stuff1 h2{
+  color: #000000;
+}
+
+.stuff2 {
+  background-image: url("https://raw.githubusercontent.com/locness3/images-host/master/ahmed-saffu-420396-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+}
