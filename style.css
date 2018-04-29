@@ -61,3 +61,12 @@ nav p {
   background-size: cover;
   background-position: center;
 }
+
+.stuff3 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000000;
+  background-image: url("https://raw.githubusercontent.com/locness3/images-host/master/lennyhome.png");
+  background-position: center;
+
+}
