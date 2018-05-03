@@ -1,0 +1,40 @@
+/* Fonts from Google Fonts - more at https://fonts.google.com */
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+body {
+  font-family: "Oswald", sans-serif;
+  margin-top: 15rem;
+  color: #3749d8;
+}
+
+main {
+  align-content: center;
+  justify-content: center;
+}
+
+#error {
+  text-align: center;
+}
+
+#errorhead {
+  font-size: 100px;
+}
+
+#logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#back {
+  color: #3749d8;
+  text-decoration: none;
+  padding: 5px;
+  border: solid 2px #3749d8;
+  border-radius: 50px;
+  transition-duration: 0.05s;
+}
+
+#back:hover {
+  border-color: #2d3bb0;
+  color: #2d3bb0;
+}
