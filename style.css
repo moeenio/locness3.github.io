@@ -72,6 +72,12 @@ nav p {
 
 }
 
+.stuff4 {
+  background-image: url("https://raw.githubusercontent.com/locness3/images-host/master/plastiques.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .white {
   color: #ffffff;
 }
