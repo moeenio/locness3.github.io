@@ -77,7 +77,11 @@ nav p {
   background-size: cover;
   background-position: center;
 }
-
+.stuff5 {
+	background-image: url("https://screenshotscdn.firefoxusercontent.com/images/8e4a7c94-e70e-425f-95c3-4ce7d52bbb0c.png");
+  background-size: cover;
+  background-position: center;
+}
 .white {
   color: #ffffff;
 }
