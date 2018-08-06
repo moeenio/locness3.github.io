@@ -1,7 +1,7 @@
 /* Fonts from Google Fonts - more at https://fonts.google.com */
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,700');
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
-@import url('https://fonts.googleapis.com/css?family=Monoton');
+
 
 body {
    font-family: "Cabin", sans-serif; 
@@ -12,11 +12,12 @@ header {
 }
 
 #title {
-  font-family: "Monoton", cursive;
+  font-family: "Oswald", sans-serif;
+    color: #FFFFFF;
 }
 
 nav p {
-  color: #000000;
+  color: #FFFFFF;
   text-decoration: none;
   display: inline;
   margin-right: 10px;
