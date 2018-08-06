@@ -3,7 +3,8 @@
 body {
   font-family: "Oswald", sans-serif;
   margin-top: 15rem;
-  color: #3749d8;
+  color: #FFFFFF;
+  background-color: #f70909;
 }
 
 main {
@@ -26,15 +27,14 @@ main {
 }
 
 #back {
-  color: #3749d8;
+  color: #f2f2f4;
   text-decoration: none;
   padding: 5px;
-  border: solid 2px #3749d8;
+  border: solid 2px #FFFFFF;
   border-radius: 50px;
   transition-duration: 0.05s;
 }
 
 #back:hover {
-  border-color: #2d3bb0;
-  color: #2d3bb0;
+  border-color: #f2f2f4;
 }
