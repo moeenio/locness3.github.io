@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <img src="/site-logo.svg" alt="Locness" class="site-logo">
+    </header>
+    <main>
+      {% for post in site.posts %}
+      <div class="post" style="background-image: url('/{{ post.image }}')">
+        <div class="post-overlay"></div>
+        <h3 class="post-title">{{ post.title }}</h3>
+        <p class="post-text">{{ post.excerpt }}</p>
+        <a class="post-link">{{ post.link }}</a>
+      </div>
+      {% endfor %}
+    </main>
+  </body>
+</html>
