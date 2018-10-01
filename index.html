@@ -13,7 +13,7 @@
         <div class="post-overlay"></div>
         <h3 class="post-title">{{ post.title }}</h3>
         <p class="post-text">{{ post.excerpt }}</p>
-        <a class="post-link">{{ post.link }}</a>
+        <a class="post-link" href="{{ post.link }}">{{ post.link-title }}</a>
       </div>
       {% endfor %}
     </main>
