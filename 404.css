@@ -2,7 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 body {
   font-family: "Oswald", sans-serif;
-  margin-top: 15rem;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
   color: #4250f4;
 }
 
@@ -26,14 +27,14 @@ main {
 }
 
 #back {
-  color: #f2f2f4;
+  color: #4250f4;
   text-decoration: none;
   padding: 5px;
-  border: solid 2px #FFFFFF;
+  border: solid 2px transparent;
   border-radius: 50px;
   transition-duration: 0.05s;
 }
 
 #back:hover {
-  border-color: #f2f2f4;
+  border-color: #4250f4;
 }
