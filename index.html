@@ -11,6 +11,13 @@ layout: default
   <body>
     <header class="site-header">
       <img src="/site-logo.svg" alt="Locness" class="site-logo">
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="https://locnesssite.wordpress.com" target="_blank"><img src="/icons/edit-2.svg" alt="Blog"></a>
+          </li>
+        </ul>
+      </nav>
     </header>
     <main>
       {% for post in site.posts %}
@@ -23,5 +30,6 @@ layout: default
       {% endfor %}
     </main>
     <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e2044b26-366b-429e-b326-e5e47a6fb7d3";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+
   </body>
 </html>
