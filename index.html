@@ -23,6 +23,9 @@ layout: default
       </nav>
     </header>
     <main>
+      <div class="intro">
+        {{ site.intro }}
+      </div>
       {% for thing in site.stuff %}
       <div class="post" style="background-image: url('/{{ post.image }}')">
         <div class="post-overlay"></div>
