@@ -29,9 +29,9 @@ layout: default
       {% for thing in site.stuff %}
       <div class="post" style="background-image: url('/{{ post.image }}')">
         <div class="post-overlay"></div>
-        <h3 class="post-title">{{ post.title }}</h3>
-        <p class="post-text">{{ post.excerpt }}</p>
-        <a class="post-link" href="{{ post.link }}">{{ post.link-title }}</a>
+        <h3 class="post-title">{{ thing.title }}</h3>
+        <p class="post-text">{{ thing.excerpt }}</p>
+        <a class="post-link" href="{{ thing.link }}">{{ thing.link-title }}</a>
       </div>
       {% endfor %}
     </main>
