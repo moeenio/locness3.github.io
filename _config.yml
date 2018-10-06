@@ -11,8 +11,6 @@ collections:
   uploads:
     title: Uploads
     output: true
-intro: |-
-  Welcome to my site v2.0 !
-  I'm now using [Jekyll](http://jekyllrb.com) and [SiteLeaf](http://siteleaf.com).
-  I'm still a "young boy passionated about computers", as I wrote before.
-  Find my stuff here.
+intro: "Welcome to my site v2.0 !  \nI'm now using [Jekyll](http://jekyllrb.com) and
+  [SiteLeaf](http://siteleaf.com).\nI'm still a \"young boy passionated about computers\",
+  as I wrote before.\nFind my stuff here."
