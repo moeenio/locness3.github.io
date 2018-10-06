@@ -54,3 +54,10 @@ body {
 .post * {
   color: #ffffff;
 }
+
+.post-link {
+	background-color: #478dff;
+	text-decoration: none;
+	padding: 5px 100px;
+	border-radius: 100px;
+}
