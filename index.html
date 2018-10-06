@@ -27,7 +27,7 @@ layout: default
         {{ site.intro }}
       </div>
       {% for thing in site.stuff %}
-      <div class="post" style="background-image: url('/{{ post.image }}')">
+      <div class="post" style="background-image: url('/{{ thing.image }}')">
         <div class="post-overlay"></div>
         <h3 class="post-title">{{ thing.title }}</h3>
         <p class="post-text">{{ thing.excerpt }}</p>
