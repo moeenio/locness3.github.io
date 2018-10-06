@@ -61,3 +61,7 @@ body {
 	padding: 5px 100px;
 	border-radius: 100px;
 }
+
+.post-link:hover {
+	background-color: #3a70c9;
+}
