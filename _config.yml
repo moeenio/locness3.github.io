@@ -13,6 +13,5 @@ collections:
     output: true
 intro: |-
   Welcome to my site v2.0 !<br>
-  I'm now using [Jekyll](http://jekyllrb.com) and [SiteLeaf](http://siteleaf.com).<br>
   I'm still a "young boy passionated about computers", as I wrote before.<br>
-  Find my stuff here.
+  <h1>My stuff</h1>
