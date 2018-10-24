@@ -13,6 +13,5 @@ collections:
     output: true
 intro: |-
   Welcome to my site v2.0 !<br>
-  I'm still a "young boy passionated about computers", as I wrote before.<br>
-  <h1>My stuff</h1>
+  I'm still a "young boy passionated about computers", as I wrote before.
 theme: jekyll-theme-cayman
