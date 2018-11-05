@@ -1,13 +1,13 @@
 ---
 layout: default
 ---
-
+<!-- Icons from feathericons.com -->
 <!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Site of Locness, a young boy doing things sometimes.">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Locness</title>
   </head>
   <body>
@@ -16,13 +16,25 @@ layout: default
       <nav class="nav">
         <ul>
           <li>
-            <a href="https://locnesssite.wordpress.com" target="_blank" class="nav-link"><img src="/icons/edit-2.svg" alt="Blog"></a>
+            <a href="https://locnesssite.wordpress.com" target="_blank" class="nav-link" aria-label="My blog">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit-2">
+              <polygon points="16 3 21 8 8 21 3 21 3 16 16 3"></polygon>
+              </svg>
+            </a>
           </li>
           <li>
-            <a href="https://github.com/locness3" target="_blank" class="nav-link"><img src="/icons/github.svg" alt="GitHub"></a>
+            <a href="https://github.com/locness3" target="_blank" class="nav-link" aria-label="My Github Profile">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
           </li>
         </ul>
       </nav>
+      <div class="night-mode-toggle">
+      <input type="checkbox" id="dark-mode-toggle" onchange="switchTheme(this)"><label for="dark-mode-toggle" class="dark-mode-label">Dark mode</label>
+      </div>
+      <br>
     </header>
     <main>
       <div class="intro">
@@ -38,7 +50,24 @@ layout: default
       </div>
       {% endfor %}
     </main>
-    <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="e2044b26-366b-429e-b326-e5e47a6fb7d3";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
-
+    <script>
+    var switchTheme = function(checkbox) {
+      if (checkbox.checked === true) {
+        document.body.className = "dark-theme";
+      }
+      else {
+        document.body.className = "";
+      }
+    }
+    </script>
+    <script type="text/javascript">
+      window.$crisp=[];
+      window.CRISP_WEBSITE_ID="e2044b26-366b-429e-b326-e5e47a6fb7d3";
+      (function() {
+        d=document;s=d.createElement("script");
+        s.src="https://client.crisp.chat/l.js";
+        s.async=1;d.getElementsByTagName("head")[0].appendChild(s);
+      })();
+    </script>
   </body>
 </html>
