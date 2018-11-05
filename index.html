@@ -31,8 +31,8 @@ layout: default
           </li>
         </ul>
       </nav>
-      <div class="night-mode-toggle">
-      <input type="checkbox" id="dark-mode-toggle" onchange="switchTheme(this)"><label for="dark-mode-toggle" class="dark-mode-label">Dark mode</label>
+      <div class="night-mode-toggle" data-tippy="This will use local storage if available to remember your choice.">
+        <input type="checkbox" id="dark-mode-toggle" onchange="switchTheme()"><label for="dark-mode-toggle" class="dark-mode-label">Dark mode <noscript><em>Needs JS to work</em></noscript></label>
       </div>
       <br>
     </header>
@@ -50,15 +50,51 @@ layout: default
       </div>
       {% endfor %}
     </main>
+    <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
     <script>
-    var switchTheme = function(checkbox) {
-      if (checkbox.checked === true) {
+      // Local storage detector from MDN
+      function storageAvailable(type) {
+        try {
+          var storage = window[type],
+              x = '__storage_test__';
+          storage.setItem(x, x);
+          storage.removeItem(x);
+          return true;
+        }
+        catch(e) {
+            return e instanceof DOMException && (
+              // everything except Firefox
+              e.code === 22 ||
+              // Firefox
+              e.code === 1014 ||
+              // test name field too, because code might not be present
+              // everything except Firefox
+              e.name === 'QuotaExceededError' ||
+              // Firefox
+              e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+              // acknowledge QuotaExceededError only if there's something already stored
+              storage.length !== 0;
+        }
+      }
+      var darkCheckbox = document.getElementById("dark-mode-toggle");
+      if (localStorage.darkMode === "true") {
+        darkCheckbox.checked = "true";
         document.body.className = "dark-theme";
       }
-      else {
-        document.body.className = "";
+      var switchTheme = function() {
+        if (darkCheckbox.checked === true) {
+          document.body.className = "dark-theme";
+          if (storageAvailable("localStorage")) {
+            localStorage.darkMode = "true";
+          }
+        }
+        else {
+          document.body.className = "";
+          if (storageAvailable("localStorage")) {
+            localStorage.clear();
+          }
+        }
       }
-    }
     </script>
     <script type="text/javascript">
       window.$crisp=[];

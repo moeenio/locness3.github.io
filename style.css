@@ -81,8 +81,6 @@ body.dark-theme {
   display: inline-block;
   background-color: #478dff;
   background-image: -webkit-gradient(linear, left top, right top, from(#7515BF), to(#1438AE));
-  background-image: -webkit-linear-gradient(left, #7515BF, #1438AE);
-  background-image: -o-linear-gradient(left, #7515BF, #1438AE);
   background-image: linear-gradient(90deg, #7515BF, #1438AE);;
   text-decoration: none;
   padding: 5px 100px;
@@ -91,8 +89,6 @@ body.dark-theme {
 
 .post-link:hover {
   background-image: -webkit-gradient(linear, left top, right top, from(#9547d1), to(#4161cc));
-  background-image: -webkit-linear-gradient(left, #9547d1, #4161cc);
-  background-image: -o-linear-gradient(left, #9547d1, #4161cc);
   background-image: linear-gradient(90deg, #9547d1, #4161cc);
 }
 
