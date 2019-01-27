@@ -1,15 +1,18 @@
 /* Fonts from Google Fonts - more at https://fonts.google.com */
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 body {
+  --main-color: #4250f4;
+  --bg-color: #ffffff;
   font-family: "Oswald", sans-serif;
   margin-top: 15vh;
   margin-bottom: 15vh;
-  color: #4250f4;
+  color: var(--main-color);
+  background-color: var(--bg-color);
 }
 
-main {
-  align-content: center;
-  justify-content: center;
+body.dark-theme {
+  --main-color: #ffffff;
+  --bg-color: #262626;
 }
 
 #error {
@@ -27,15 +30,17 @@ main {
 }
 
 #back {
-  color: #4250f4;
+  color: var(--main-color);
   text-decoration: none;
   padding: 5px;
   border: solid 2px transparent;
   border-radius: 50px;
+  -webkit-transition-duration: 0.05s;
   transition-duration: 0.05s;
+  text-transform: uppercase;
 }
 
 #back:hover {
-  border-color: #4250f4;
+  border-color: var(--main-color);
 }
 

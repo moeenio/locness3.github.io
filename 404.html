@@ -11,8 +11,13 @@
       <img src="site-logo.svg" alt="Locness" id="logo">
       <div id="error">
         <div id="errorhead">404</div>
-        <div id="errortext"><p>This page can't be found.<br><br><a href="javascript:history.back()" id="back">GO BACK</a></p></div>
+        <div id="errortext"><p>This page can't be found.<br><br><a href="javascript:history.back()" id="back">Go back</a></p></div>
       </div>
     </main>
+    <script>
+    if (localStorage.darkMode === "true") {
+        document.body.className = "dark-theme";
+      }
+    </script>
   </body>
 </html>

@@ -1,6 +1,5 @@
 /* Fonts from Google Fonts - more at https://fonts.google.com */
 @import url('https://fonts.googleapis.com/css?family=Cabin:400,700');
-@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 
 * {
   -webkit-box-sizing: border-box;
@@ -21,7 +20,7 @@ body {
 
 body.dark-theme {
   --main-color: #ffffff;
-  --bg-color: #4d4d4d;
+  --bg-color: #262626;
 }
 
 .site-header {
