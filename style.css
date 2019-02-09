@@ -24,9 +24,27 @@ body.dark-theme {
 }
 
 .site-header {
+  position: sticky;
+  top: 0;
+  transition: box-shadow 0.2s;
   margin-top: 50px;
   width: 100%;
   text-align: center;
+  background-color: var(--bg-color);
+}
+
+.site-header.collapse {
+  height: 5rem;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+}
+
+.site-header.collapse > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.site-header.collapse .site-logo {
+    height: 2rem;
 }
 
 .nav ul {

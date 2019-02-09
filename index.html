@@ -1,7 +1,8 @@
+<!--
 ---
 layout: default
 ---
-
+-->
 <!-- Icons from feathericons.com -->
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +13,7 @@ layout: default
     <title>Locness</title>
   </head>
   <body>
-    <header class="site-header">
+    <header id="site-header" class="site-header">
       <img src="/site-logo.svg" alt="Locness" class="site-logo">
       <nav class="nav">
         <ul>
@@ -92,6 +93,14 @@ layout: default
           if (storageAvailable("localStorage")) {
             localStorage.clear();
           }
+        }
+      }
+      window.onscroll = function() {
+        if (window.pageYOffset > 50) {
+          document.getElementById("site-header").className = "site-header collapse";
+        }
+        else {
+          document.getElementById("site-header").className = "site-header";
         }
       }
     </script>
