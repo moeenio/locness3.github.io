@@ -31,6 +31,7 @@ body.dark-theme {
   width: 100%;
   text-align: center;
   background-color: var(--bg-color);
+  z-index: 1;
 }
 
 .site-header.collapse {
