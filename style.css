@@ -69,6 +69,10 @@ body.dark-theme {
   vertical-align: middle;
 }
 
+header.collapse ~ main {
+  padding-top: 195.9px;
+}
+
 .intro {
   max-width: 1000px;
   margin: 0 auto;
