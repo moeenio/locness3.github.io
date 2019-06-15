@@ -1,5 +1,5 @@
 ---
-title: Userstyles
+title: Various Userstyles
 date: 2018-11-19 15:30:00 Z
 position: 1
 image: "/uploads/userstyles.png"
