@@ -56,6 +56,7 @@ layout: default
     <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
     <script>
       // Local storage detector from MDN
+      
       function storageAvailable(type) {
         try {
           var storage = window[type],
@@ -79,6 +80,9 @@ layout: default
               storage.length !== 0;
         }
       }
+
+      // Handling dark mode
+
       var darkCheckbox = document.getElementById("dark-mode-toggle");
       if (localStorage.darkMode === "true") {
         darkCheckbox.checked = "true";
@@ -98,12 +102,16 @@ layout: default
           }
         }
       }
+
+      // Sticky header
+      
+      siteHeader = document.getElementById("site-header");
       window.onscroll = function() {
         if (window.pageYOffset > 50) {
-          document.getElementById("site-header").className = "site-header collapse";
+          siteHeader.className = "site-header collapse";
         }
         else {
-          document.getElementById("site-header").className = "site-header";
+          siteHeader.className = "site-header";
         }
       }
     </script>
