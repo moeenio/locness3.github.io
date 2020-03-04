@@ -34,6 +34,16 @@ body.dark-theme {
   --main-color: #ffffff;
   --bg-color: #262626;
 }
+@media (prefers-color-scheme: dark) {
+  body {
+    --main-color: #ffffff;
+    --bg-color: #262626;
+  }
+  
+  .night-mode-toggle {
+    display: none;
+  }
+}
 
 .site-header {
   -webkit-transition: -webkit-box-shadow 0.2s;

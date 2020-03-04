@@ -45,7 +45,7 @@ layout: default
         <h1>My stuff</h1>
       </div>
       {% for thing in site.stuff %}
-      <div class="post" style="background-image: url('{{ thing.image }}')">
+      <div class="post" style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('{{ thing.image }}')">
         <div class="post-overlay"></div>
         <h2 class="post-title">{{ thing.title }}</h2>
         {{ thing.excerpt }}
