@@ -39,6 +39,10 @@ body.dark-theme {
     --main-color: #ffffff;
     --bg-color: #262626;
   }
+  
+  .night-mode-toggle {
+    display: none;
+  }
 }
 
 .site-header {
