@@ -1,149 +1,35 @@
 /* fonts */
 
-@import url('https://rsms.me/inter/inter.css');
-@import url('https://fonts.googleapis.com/css?family=Poppins:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:500&display=swap');
 
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
+html {
+  display: flex;
+  height: 100vh;
+}
+
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Source Code Pro", monospace;
   font-size: 24px;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  --main-color: #000000;
-  --bg-color: #ffffff;
-  color: var(--main-color);
-  background-color: var(--bg-color);
-}
-
-h1, h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: bold;
-}
-
-/* from https://rsms.me/inter/ */
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
-}
-
-body.dark-theme {
-  --main-color: #ffffff;
-  --bg-color: #262626;
-}
-@media (prefers-color-scheme: dark) {
-  body {
-    --main-color: #ffffff;
-    --bg-color: #262626;
-  }
-  
-  .night-mode-toggle {
-    display: none;
-  }
-}
-
-.site-header {
-  -webkit-transition: -webkit-box-shadow 0.2s;
-  transition: -webkit-box-shadow 0.2s;
-  transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
-  margin-top: 50px;
-  width: 100%;
+  margin: auto;
   text-align: center;
-  background-color: var(--bg-color);
-  z-index: 1;
+  color: #b58900;
+  background-color: #002b36;
 }
 
-.site-header.collapse {
-  position: fixed;
-  top: 0;
-  left: 0;
-  margin-top: 0;
-  min-height: 5rem;
-  -webkit-box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.2);
+a {
+  color: inherit;
 }
 
-.site-header.collapse > * {
-  display: inline-block;
-  vertical-align: middle;
+h1 {
+  font-weight: normal;
+  color: #859900;
 }
 
-.site-header.collapse .site-logo {
-    height: 2rem;
-}
-
-.nav ul {
-  list-style-type: none;
-  text-align: center;
-  width: 100%;
-  padding: 0;
-}
-
-.nav ul li {
-  display: inline-block;
-}
-
-.nav-link {
-  color: var(--main-color);
-}
-
-.dark-mode-label {
-  vertical-align: middle;
-}
-
-header.collapse ~ main {
-  padding-top: 195.9px;
-}
-
-.intro {
-  max-width: 1000px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.post {
-  position: relative;
-  width: 100%;
-  background-position: center;
-  background-size: cover;
-  padding: 50px 10px;
-}
-
-.post-overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.31);
-}
-
-.post * {
-  color: #ffffff;
-}
-
-.post-link {
-  display: inline-block;
-  background-color: #1497A6;
-  text-decoration: none;
-  padding: 15px 50px;
-  border-radius: 5px;
-}
-
-.post-link:hover {
-  background-color: #195973;
-}
-
-@media only screen and (max-width: 800px) {
-  .post {
-    text-align: center;
-  }
-  .post-link {
-    display: block;
-  }
+small {
+  color: #657b83;
 }
