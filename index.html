@@ -1,120 +1,15 @@
----
-layout: default
----
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Site of Locness, a young boy doing things sometimes.">
     <link rel="stylesheet" href="style.css">
-    <title>Locness</title>
+    <title>This website has moved</title>
+    <meta http-equiv="refresh" content="4; url=https://locness.hopto.org">
   </head>
   <body>
-    <header id="site-header" class="site-header">
-      <img src="/site-logo.svg" alt="Locness" class="site-logo">
-      <nav class="nav">
-        <ul>
-          <li>
-            <a href="https://locnesssite.wordpress.com" target="_blank" rel="noopener" class="nav-link" aria-label="My blog">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/locness3" target="_blank" rel="noopener" class="nav-link" aria-label="My Github Profile">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://codepen.io/Locness" target="_blank" rel="noopener" class="nav-link" aria-label="My CodePen Profile">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-codepen"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><polyline points="22 8.5 12 15.5 2 8.5"></polyline><polyline points="2 15.5 12 8.5 22 15.5"></polyline><line x1="12" y1="2" x2="12" y2="8.5"></line></svg>
-            </a>
-          </li>
-        </ul>
-      </nav>
-      <div class="night-mode-toggle" data-tippy="This will use local storage if available to remember your choice.">
-        <input type="checkbox" id="dark-mode-toggle" onchange="switchTheme()"><label for="dark-mode-toggle" class="dark-mode-label">Dark mode <noscript><em>Needs JS to work</em></noscript></label>
-      </div>
-      <br>
-    </header>
-    <main>
-      <div class="intro">
-        {{ site.intro }}
-        <h1>My stuff</h1>
-      </div>
-      {% for thing in site.stuff %}
-      <div class="post" style="background-image: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('{{ thing.image }}')">
-        <div class="post-overlay"></div>
-        <h2 class="post-title">{{ thing.title }}</h2>
-        {{ thing.excerpt }}
-        <a class="post-link" href="{{ thing.link }}">{{ thing.link-title }}</a>
-      </div>
-      {% endfor %}
-    </main>
-    <script src="https://unpkg.com/tippy.js@3/dist/tippy.all.min.js"></script>
-    <script>
-      // Local storage detector from MDN
-      
-      function storageAvailable(type) {
-        try {
-          var storage = window[type],
-              x = '__storage_test__';
-          storage.setItem(x, x);
-          storage.removeItem(x);
-          return true;
-        }
-        catch(e) {
-            return e instanceof DOMException && (
-              // everything except Firefox
-              e.code === 22 ||
-              // Firefox
-              e.code === 1014 ||
-              // test name field too, because code might not be present
-              // everything except Firefox
-              e.name === 'QuotaExceededError' ||
-              // Firefox
-              e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-              // acknowledge QuotaExceededError only if there's something already stored
-              storage.length !== 0;
-        }
-      }
-
-      // Handling dark mode
-
-      var darkCheckbox = document.getElementById("dark-mode-toggle");
-      if (localStorage.darkMode === "true") {
-        darkCheckbox.checked = "true";
-        document.body.className = "dark-theme";
-      }
-      var switchTheme = function() {
-        if (darkCheckbox.checked === true) {
-          document.body.className = "dark-theme";
-          if (storageAvailable("localStorage")) {
-            localStorage.darkMode = "true";
-          }
-        }
-        else {
-          document.body.className = "";
-          if (storageAvailable("localStorage")) {
-            localStorage.clear();
-          }
-        }
-      }
-
-      // Sticky header
-      
-      siteHeader = document.getElementById("site-header");
-      window.onscroll = function() {
-        if (window.pageYOffset > 50) {
-          siteHeader.className = "site-header collapse";
-        }
-        else {
-          siteHeader.className = "site-header";
-        }
-      }
-    </script>
-    <script src="//code.tidio.co/op4ctf2uyd2mbjdbocmzkpy6lyeappec.js"></script>
+    <h1>🚚 I have moved my website.</h1>
+    <p>You're being redirected.</p>
+    <small>If you want to see the old website, it's right <a href="https://locness-old.netlify.app">here</a>.</small>
   </body>
 </html>
