@@ -1,2 +1,2 @@
 # locness3.github.io
-Remaking my site!
+Redirect to my actual website : https://locness.duckdns.org
